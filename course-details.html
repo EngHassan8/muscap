@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Public Speaking Course – Coach Musab</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+<style>
+:root{
+  --main:#1a237e;
+  --accent:#f4c542;
+  --bg:#f6f8fb;
+  --card:#ffffff;
+  --muted:#6b7280;
+}
+
+*{box-sizing:border-box;font-family:Inter,system-ui}
+body{margin:0;background:var(--bg);color:#111}
+
+.wrap{max-width:1100px;margin:auto;padding:16px}
+
+.section-title{
+  font-size:26px;
+  color:var(--main);
+  margin-bottom:20px;
+}
+
+/* COURSE CARD */
+.course-full{
+  background:#fff;
+  padding:28px;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+
+/* VIDEO */
+.course-video iframe{
+  width:100%;
+  height:420px;
+  border-radius:14px;
+  margin-bottom:22px;
+}
+
+/* CONTENT */
+.course-box p{
+  line-height:1.8;
+  color:var(--muted);
+}
+
+.course-box h3{
+  margin-top:24px;
+  color:var(--main);
+}
+
+.course-box ul{
+  margin-left:18px;
+  line-height:1.8;
+}
+
+.price{
+  font-size:22px;
+  margin-top:20px;
+  font-weight:bold;
+}
+
+/* BUTTONS */
+.course-actions{
+  display:flex;
+  gap:14px;
+  margin-top:24px;
+  flex-wrap:wrap;
+}
+
+.enroll-btn{
+  background:var(--accent);
+  border:none;
+  padding:12px 22px;
+  border-radius:10px;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.whatsapp-btn{
+  background:var(--main);
+  color:#fff;
+  border:none;
+  padding:12px 22px;
+  border-radius:10px;
+  font-size:18px;
+  cursor:pointer;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .course-video iframe{height:240px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+  <section class="course-full">
+
+    <h2 class="section-title">
+      5–6 Week Public Speaking Course — Group Class
+    </h2>
+
+    <!-- VIDEO (kan ku beddel video-gaaga adiga kuu jira) -->
+    <div class="course-video">
+      <iframe 
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="course-box">
+
+      <p>
+        Barnaamijkan waa <strong>group class xirfad sare leh</strong> oo loogu talagalay
+        dadka raba inay ka gudbaan cabsida fagaare ka hadalka, kana dhisaan
+        kalsooni dhab ah oo la dareemi karo.
+      </p>
+
+      <p>
+        Mudada 5–6 toddobaad, waxaad baran doontaa farsamooyin
+        kaa dhigaya qof si cad, kalsooni leh, una hadla si saameyn ku reebta
+        dadka hortooda.
+      </p>
+
+      <h3>Waxaad baran doontaa:</h3>
+      <ul>
+        <li>Sida loo xakameeyo cabsi & walwal</li>
+        <li>Sida loo diyaariyo khudbad professional ah</li>
+        <li>Sida loo qaabeeyo hadalka (structure & flow)</li>
+        <li>Sida loo hadlo si saameyn leh</li>
+        <li>Body language & eye contact</li>
+        <li>Cod isticmaal & kalsooni dhisid</li>
+      </ul>
+
+      <h3>Yaa loogu talagalay?</h3>
+      <ul>
+        <li>Arday jaamacadeed</li>
+        <li>Xirfadlayaal shaqo</li>
+        <li>Ganacsato & leaders</li>
+        <li>Qof kasta oo raba horumar shaqsiyeed</li>
+      </ul>
+
+      <h3>Sida uu u socdo:</h3>
+      <ul>
+        <li>5–6 toddobaad</li>
+        <li>Group Class (koox yar)</li>
+        <li>Tababar ficil ah</li>
+        <li>Feedback & guidance toos ah</li>
+      </ul>
+
+      <p class="price">
+        Qiimaha: <span style="color:var(--main)">La xiriir si faahfaahin loo helo</span>
+      </p>
+
+      <div class="course-actions">
+
+        <!-- <button class="enroll-btn">
+          Enroll Now
+        </button> -->
+
+        <button class="whatsapp-btn"
+          onclick="window.open('https://wa.me/252683887140?text=Hello,%20waxaan%20rabaa%20faahfaahin%20Public%20Speaking%20Group%20Course')">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses | Coach Musab</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+:root{
+  --primary:#ff6a00;
+  --secondary:#6a00ff;
+  --dark:#0f172a;
+  --light:#f9fafb;
+  --card:#ffffff;
+  --muted:#64748b;
+  --radius:18px;
+  --shadow:0 8px 30px rgba(2,6,23,0.08);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif;}
+
+body{
+  background:linear-gradient(135deg,#fefefe,#fee3d7);
+  color:var(--dark);
+}
+
+.wrap{max-width:1180px;margin:auto;padding:20px;}
+
+/* HEADER */
+header{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;padding:18px 22px;border-radius:var(--radius);
+  display:flex;align-items:center;justify-content:space-between;
+  box-shadow:0 20px 40px rgba(0,0,0,.25);position:sticky;top:15px;z-index:100;
+}
+.brand{display:flex;gap:14px;align-items:center;}
+.brand img{width:56px;height:56px;border-radius:50%;border:3px solid #fff;}
+nav{display:flex;gap:22px;}
+nav a{color:#fff;text-decoration:none;font-weight:600;position:relative;}
+nav a::after{content:"";position:absolute;left:0;bottom:-8px;width:0;height:3px;background:#fff;transition:.3s;}
+nav a:hover::after, nav a.active::after{width:100%;}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:26px;cursor:pointer;}
+
+
+h1.title{
+  text-align:center;
+  margin:40px 0 10px;
+  font-size:40px;
+  font-weight:800;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.subtext{
+  text-align:center;
+  max-width:640px;
+  margin:auto;
+  font-size:16px;
+  color:var(--muted);
+}
+
+/* ===== COURSE GRID ===== */
+
+.course-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+  gap:25px;
+  margin-top:40px;
+}
+
+.card{
+  background:#fff;
+  border-radius:var(--radius);
+  padding:20px;
+  box-shadow:var(--shadow);
+  transition:0.35s;
+}
+.card:hover{transform:translateY(-8px) scale(1.02);}
+
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:var(--radius);
+}
+
+.card h3{
+  margin:16px 0 8px;
+  font-size:22px;
+  font-weight:700;
+  color:var(--primary);
+}
+.card p{color:var(--muted);line-height:1.6;}
+
+.btn{
+  display:inline-block;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;text-align:center;
+  padding:10px 18px;
+  border-radius:var(--radius);
+  margin-top:12px;
+  font-weight:700;text-decoration:none;
+}
+.btn:hover{opacity:.85;}
+
+.section-title{
+  margin:60px 0 18px;
+  font-size:28px;
+  font-weight:700;
+  text-align:center;
+  color:var(--dark);
+}
+
+.benefits{
+  background:#fff;
+  padding:40px;
+  border-radius:var(--radius);
+  margin-top:40px;
+  box-shadow:var(--shadow);
+}
+.benefits h2{text-align:center;color:var(--primary);}
+.benefits ul{margin-top:20px;list-style:none;padding:0;}
+.benefits li{
+  margin:12px 0;
+  font-size:17px;
+  display:flex;align-items:center;gap:10px;
+}
+.benefits li i{color:var(--secondary);}
+
+.cta{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  padding:50px;
+  border-radius:var(--radius);
+  text-align:center;
+  color:#fff;
+  margin:60px 0;
+}
+.cta h2{font-size:32px;margin-bottom:10px;}
+.cta p{font-size:17px;margin-bottom:20px;}
+.cta a{background:#fff;color:var(--secondary);padding:12px 18px;border-radius:var(--radius);font-weight:700;text-decoration:none;}
+.cta a:hover{opacity:.8;}
+
+footer{
+  margin-top:40px;text-align:center;color:var(--muted);font-size:14px;padding:20px;
+}
+
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+
+<header>
+  <div class="brand">
+    <img src="circle prodile.jpg" alt="Coach Musab">
+    <div>
+      <h3>Coach Musab</h3>
+      <small>Public Speaking Coach</small>
+    </div>
+  </div>
+
+  <nav id="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="ebooks.html" >E-books</a>
+    <a href="courses.html" class="active" >Courses</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <button class="hamburger" id="hamburger">☰</button>
+</header>
+
+
+  <h1 class="title">Public Speaking Courses</h1>
+  <p class="subtext">
+    Ku bixi safar isbeddel ah oo laga bilaabo cabsi hadal ilaa Kalsooni Buuxda 🗣🔥.  
+  </p>
+
+
+  <!-- COURSES GRID -->
+  <div class="course-grid">
+
+    <div class="card">
+      <img src="Coach Mark 1 to 1 .avif" alt="">
+      <h3>1:1 Coaching Program</h3>
+      <p>Tababar gaar ah oo KUGAAR ah si loo jebiyo cabsi hadal, loo dhiso cod saameyn leh, loona helo kalsooni buuxda.</p>
+      <a href="contact.html" class="btn">Join Now</a>
+    </div>
+
+    <div class="card">
+      <img src="10ka xeer.png" alt="">
+      <h3>10ka Xeer ee Hadalka</h3>
+      <p>Bar sida loo isticmaalo xeerarka hadalka si aad u noqoto qof dadka ka higsada markaad hadleyso.</p>
+      <a href="contact.html" class="btn">Enroll</a>
+    </div>
+
+    <div class="card">
+      <img src="coach-profile.png" alt="">
+      <h3>Group Coaching</h3>
+      <p>Cashiryo kooxeed oo ku dhisan feedback, wada-shaqeyn iyo horumar degdeg ah.</p>
+      <a href="contact.html" class="btn">Book Seat</a>
+    </div>
+
+    <div class="card">
+      <img src="professional standing.jpg" alt="">
+      <h3>Confidence Booster</h3>
+      <p>Bar farsamooyin degdeg ah oo kaa saacidaya inaad codkaaga iyo jirkaaga xakameyso.</p>
+      <a href="contact.html" class="btn">Start Today</a>
+    </div>
+
+  </div>
+
+  <!-- BENEFITS -->
+  <div class="benefits">
+    <h2>Waxaad Ka Faa'iideysan Doontaa</h2>
+    <ul>
+      <li><i class="fa fa-check"></i> Kalsooni aad ku hadasho meel walba</li>
+      <li><i class="fa fa-check"></i> Jir-xir xirfadeed & body language</li>
+      <li><i class="fa fa-check"></i> Diyaarinta hadalka & qaabeynta content-ka</li>
+      <li><i class="fa fa-check"></i> Ka hortagga cabsida & su'aalaha dadka hor yaal</li>
+      <li><i class="fa fa-check"></i> Cod sameyn leh iyo soo jiidasho</li>
+    </ul>
+  </div>
+
+  <!-- CTA BANNER -->
+  <div class="cta">
+    <h2>Ready to Transform Your Voice?</h2>
+    <p>Waxaan kuu diyaarinayaa barnaamij KUGAAR ah oo kaa dhigi doona qof magacaaga dhisaa!</p>
+    <a href="contact.html">Connect With Me Now</a>
+  </div>
+
+<footer>© 2025 Coach Musab — All Rights Reserved.</footer>
+</div>
+</body>
+</html>

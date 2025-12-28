@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Free Book Download — Overcome Anxiety</title>
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+      background: #f6f8fc;
+      text-align: center;
+      padding: 60px 20px;
+      color: #222;
+    }
+    h1 {
+      color: #1a237e;
+      font-size: 26px;
+    }
+    p {
+      color: #555;
+      max-width: 500px;
+      margin: 10px auto 30px;
+    }
+    button {
+      background: #1a237e;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #0d165c;
+    }
+    #freeDownloadCount {
+      margin-top: 20px;
+      color: #333;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Overcome Anxiety — Free Guide</h1>
+  <p>
+    This free guide helps students and beginners learn how to move from nervous
+    to confident in public speaking. Click below to download your copy!
+  </p>
+
+<p id="freeDownloadCount" class="small">Total Downloads: 0</p>
+<button id="freeDownloadBtn" class="btn">⬇️ Download Free Book</button>
+
+ 
+
+
+<script>
+  const FREE_BOOK_URL = "https://drive.google.com/uc?export=download&id=14MQvxxIfCOTg3b9EiwR3VagUwX7Xl9MS";
+  const freeBtn = document.getElementById("freeDownloadBtn");
+  const freeCount = document.getElementById("freeDownloadCount");
+
+  // Load saved count from localStorage
+  let count = parseInt(localStorage.getItem("freeBookCount")) || 0;
+  freeCount.textContent = `Total Downloads: ${count}`;
+
+  freeBtn.addEventListener("click", () => {
+    // Increment counter
+    count += 1;
+    localStorage.setItem("freeBookCount", count);
+    freeCount.textContent = `Total Downloads: ${count}`;
+
+    // Open PDF
+    window.open(FREE_BOOK_URL, "_blank");
+  });
+</script>
+
+
+  
+
+</body>
+</html>

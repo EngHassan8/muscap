@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Coach Musab</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root{
+  --primary:#ff6a00;
+  --secondary:#6a00ff;
+  --accent:#00c2ff;
+  --dark:#0f172a;
+  --light:#f9fafb;
+  --card:#ffffff;
+  --muted:#64748b;
+  --radius:18px;
+  --maxw:1150px;
+  --main:#ff6a00;
+}
+
+/* RESET */
+*{box-sizing:border-box;margin:0;padding:0;font-family:Poppins,sans-serif;}
+body{background:linear-gradient(135deg,#ffecd2,#fcb69f);color:var(--dark);line-height:1.7;}
+.wrap{max-width:var(--maxw);margin:auto;padding:20px;}
+
+/* HEADER */
+header{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;padding:18px 22px;border-radius:var(--radius);
+  display:flex;align-items:center;justify-content:space-between;
+  box-shadow:0 20px 40px rgba(0,0,0,.25);position:sticky;top:15px;z-index:100;
+}
+.brand{display:flex;gap:14px;align-items:center;}
+.brand img{width:56px;height:56px;border-radius:50%;border:3px solid #fff;}
+nav{display:flex;gap:22px;}
+nav a{color:#fff;text-decoration:none;font-weight:600;position:relative;}
+nav a::after{content:"";position:absolute;left:0;bottom:-8px;width:0;height:3px;background:#fff;transition:.3s;}
+nav a:hover::after, nav a.active::after{width:100%;}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:26px;cursor:pointer;}
+@media(max-width:880px){
+  nav{display:none;flex-direction:column;background:white;padding:15px;border-radius:10px;position:absolute;right:20px;top:80px;}
+  nav.show{display:flex;}
+  .hamburger{display:block;}
+}
+
+/* HERO PROFILE */
+.hero-profile{position:relative;margin-top:40px;border-radius:22px;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,.25);}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#6a00ff,#ff6a00,#00c2ff);}
+.hero-content{position:relative;display:flex;gap:40px;padding:50px;align-items:center;flex-wrap:wrap;color:#fff;}
+.hero-image img{width:260px;border-radius:20px;border:5px solid rgba(255,255,255,.8);box-shadow:0 20px 50px rgba(0,0,0,.35);}
+.hero-text{max-width:520px;}
+.hero-text .tag{display:inline-block;background:rgba(255,255,255,.2);padding:6px 14px;border-radius:30px;font-size:13px;margin-bottom:14px;}
+.hero-text h2{font-size:36px;font-weight:800;margin:10px 0;}
+.hero-text p{opacity:.95;line-height:1.7;}
+
+/* SOCIAL ICONS */
+.social-box{margin-top:26px;}
+.social-title{font-size:14px;margin-bottom:12px;}
+.social-links{display:flex;gap:14px;}
+.social-links a{
+  width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;text-decoration:none;box-shadow:0 10px 25px rgba(0,0,0,.35);transition:.3s;
+}
+.social-links a:hover{transform:translateY(-6px) scale(1.1);}
+.social-links .fb{background:#1877f2;}
+.social-links .tt{background:#000;}
+.social-links .in{background:#0a66c2;}
+.social-links .ig{background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af);}
+
+/* CONTACT GRID */
+.contact-grid{margin-top:40px;display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
+.contact-card{background:var(--card);padding:25px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(0,0,0,0.06);text-align:center;transition:.3s;}
+.contact-card:hover{transform:translateY(-4px);}
+.contact-card i{font-size:40px;color:var(--main);margin-bottom:10px;}
+.contact-card a{text-decoration:none;color:var(--main);font-weight:600;}
+
+/* FORM */
+.form-section{background:var(--card);padding:35px;border-radius:var(--radius);margin-top:50px;box-shadow:0 8px 30px rgba(0,0,0,0.08);}
+.form-section h2{text-align:center;color:var(--main);margin-bottom:20px;}
+form{display:flex;flex-direction:column;gap:16px;}
+input,textarea{padding:12px;border:1px solid #ccc;border-radius:10px;font-size:16px;}
+textarea{min-height:120px;}
+button{
+  background:linear-gradient(90deg,#6a00ff,#ff6a00);
+  color:white;font-weight:700;padding:12px;border-radius:10px;border:none;font-size:16px;cursor:pointer;
+}
+
+/* MAP */
+.map-box{margin-top:40px;border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,0.06);}
+
+/* FAQ */
+.faq{margin-top:50px;}
+.faq h2{text-align:center;color:var(--main);margin-bottom:20px;}
+.faq-item{background:white;padding:18px;border-radius:var(--radius);margin:10px 0;box-shadow:0 4px 20px rgba(0,0,0,0.05);}
+.faq-item b{color:var(--main);}
+
+/* SOCIALS */
+.socials{text-align:center;margin:40px 0;}
+.socials a{font-size:25px;margin:0 10px;color:var(--main);}
+
+/* FOOTER MINI */
+.footer-mini{text-align:center;margin:50px;color:#444;font-size:14px;}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<!-- HEADER -->
+<header>
+  <div class="brand">
+    <img src="circle prodile.jpg" alt="Coach Musab">
+    <div>
+      <h3>Coach Musab</h3>
+      <small>Public Speaking Coach</small>
+    </div>
+  </div>
+  <nav id="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="ebooks.html">E-books</a>
+    <a href="courses.html">Courses</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+  <button class="hamburger" id="hamburger">☰</button>
+</header>
+
+<!-- HERO / PROFILE -->
+<section class="hero-profile">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-image">
+      <img src="professional standing.jpg" alt="Musab Ibrahim">
+    </div>
+    <div class="hero-text">
+      <span class="tag">Public Speaking Coach</span>
+      <h2>Musab Ibrahim</h2>
+      <p>Waxaan ahay khabiir ku takhasusay horumarinta kalsoonida hadalka iyo qaabeynta hadal saameyn leh.</p>
+      <div class="social-box">
+        <p class="social-title">Connect with me</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/share/17nm2anCm5/?mibextid=wwXIfr" class="fb"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.tiktok.com/@coach_musab" class="tt"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.linkedin.com/in/musab-ibrahim-693b92343" class="in"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/coach.musab/" class="ig"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<div class="container">
+  <div class="contact-header">
+    <h2>⚡ Let's Connect</h2>
+    <p>Dooro habka aad rabto inaad ku soo xiriirto — isla markiiba waan ka jawaabi doonaa.</p>
+  </div>
+
+  <div class="contact-grid">
+    <div class="contact-card">
+      <i class="fa-brands fa-whatsapp"></i>
+      <h3>WhatsApp</h3>
+      <p>Chat si deg-deg ah</p>
+      <a href="https://wa.me/252683887140">+252 683887140 →</a>
+    </div>
+    <div class="contact-card">
+      <i class="fa-solid fa-envelope"></i>
+      <h3>Email</h3>
+      <p>Boostadaada dir</p>
+      <a href="mailto:musab716255@gmail.com">musab716255@gmail.com</a>
+    </div>
+    <div class="contact-card">
+      <i class="fa-brands fa-facebook"></i>
+      <h3>Facebook</h3>
+      <p>Follow & DM</p>
+      <a href="#">@coach-musab</a>
+    </div>
+    <div class="contact-card">
+      <i class="fa-brands fa-tiktok"></i>
+      <h3>TikTok</h3>
+      <p>Muuqaallo cusub</p>
+      <a href="#">@coach-musab</a>
+    </div>
+  </div>
+
+  <!-- FORM -->
+  <section class="form-section">
+    <h2>Send a Message</h2>
+    <form>
+      <input type="text" placeholder="Magacaaga">
+      <input type="email" placeholder="Email-kaaga">
+      <textarea placeholder="Farriintaada..."></textarea>
+      <button type="submit">Send Message 🚀</button>
+    </form>
+  </section>
+
+  <!-- MAP -->
+  <div class="map-box">
+    <iframe width="100%" height="300" src="https://maps.google.com/maps?q=Somalia&t=&z=7&ie=UTF8&iwloc=&output=embed"></iframe>
+  </div>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h2>Contact FAQ</h2>
+    <div class="faq-item"><b>⏳ Goorma ayaad la heli karaa?</b><br>Isniin - Sabti (10:00am - 8:00pm)</div>
+    <div class="faq-item"><b>💻 Ma jiraan koorsooyin Online?</b><br>Haa, Group & 1-on-1 coaching waa diyaar.</div>
+    <div class="faq-item"><b>🚀 Sidee loo bilaabaa?</b><br>WhatsApp ku bilow, waan ku hagi.</div>
+  </section>
+
+  <!-- SOCIAL -->
+  <div class="socials">
+    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer-mini">
+    © 2025 Coach Musab — All rights reserved
+  </div>
+</div>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('nav');
+hamburger.onclick = () => nav.classList.toggle('show');
+</script>
+
+</div>
+</body>
+</html>
